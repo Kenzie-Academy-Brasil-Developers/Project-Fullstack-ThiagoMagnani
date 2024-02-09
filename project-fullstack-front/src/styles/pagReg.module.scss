@@ -1,0 +1,103 @@
+.pagReg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20em;
+}
+
+.pagRegAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  background-color: #212529;
+  border-radius: 4px;
+}
+
+.RegMain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  width: 80%;
+}
+
+.headerReg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2em;
+  width: 80%;
+}
+
+.buttonHeader {
+  border: none;
+  background-color: #343b41;
+  color: #f8f9fa;
+  width: 6em;
+  height: 3em;
+  border-radius: 4px;
+}
+
+.buttonHeader:hover {
+  background-color: #3c4449;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.subTitle {
+  font-size: 0.6em;
+  color: #868e96;
+}
+
+.textTitle {
+  color: #f8f9fa;
+  margin: 0;
+  font-size: 0.75em;
+}
+
+.input {
+  width: 94%;
+  padding: 0 0.5em;
+  border: none;
+  border-radius: 4px;
+  background-color: #343b41;
+  height: 3em;
+  color: #fff;
+}
+
+.choiceModule {
+  padding: 0 0.5em;
+  border: none;
+  border-radius: 4px;
+  background-color: #343b41;
+  height: 3em;
+  color: #fff;
+  outline: 0;
+}
+
+.buttonReg {
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 3em;
+  background-color: #ff577f;
+  color: #ffffff;
+  margin-top: 0.8em;
+}
+
+.buttonReg:hover {
+  background-color: #fe406d;
+}
+
+.textError {
+  font-size: 0.6em;
+  margin: -1em 0.3em -1.48em 0;
+  color: #a5afba;
+  display: flex;
+  justify-content: right;
+}

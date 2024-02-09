@@ -1,0 +1,101 @@
+.pagLogin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20em;
+}
+
+.pagLoginAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  background-color: #212529;
+  border-radius: 4px;
+}
+
+.pagLogMain {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 2em;
+}
+
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+
+.headerLogin {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.7em;
+  color: #ff577f;
+}
+
+.title {
+  font-size: 1em;
+  margin: 0;
+  padding-bottom: 1.2em;
+  color: #fff;
+}
+
+.input {
+  width: 94%;
+  padding: 0 0.5em;
+  border: none;
+  border-radius: 4px;
+  background-color: #343b41;
+  height: 3em;
+  color: #fff;
+}
+
+.textTitle {
+  color: #f8f9fa;
+  margin: 0 0 1em 0;
+  font-size: 0.75em;
+}
+
+.textReg {
+  color: #868e96;
+  font-size: 0.7em;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonEntry {
+  background-color: #ff577f;
+  border: none;
+  height: 3em;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.buttonReg {
+  background-color: #868e96;
+  height: 3em;
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.buttonEntry:hover {
+  background-color: #fe406d;
+}
+
+.buttonReg:hover {
+  background-color: #6a7075;
+}
+
+.textError {
+  font-size: 0.6em;
+  margin: 0 0.3em -1.15em 0;
+  color: #a5afba;
+  display: flex;
+  justify-content: right;
+}
