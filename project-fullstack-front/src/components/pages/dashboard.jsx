@@ -1,4 +1,4 @@
-import styleDash from "../../styles/dashboard.module.scss";
+import styleDash from "../../styles/dashBoard.module.scss";
 import { useUserContext } from "../providers/userContext";
 import { ContactList } from "../contact/contactList";
 
