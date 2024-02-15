@@ -74,14 +74,6 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 
 ```bash
 $ npm i
-$ npm i @prisma/client
-$ npm i prisma -D
-$ npx prisma generate
-$ npm i bcryptjs
-$ npm i @types/bcryptjs -D
-$ npm i class-validator class-transformer
-$ npm i pdfkit
-$ npm i @nestjs/passport passport @nestjs/jwt passport-jwt dotenv
 ```
 
 ## Migração
