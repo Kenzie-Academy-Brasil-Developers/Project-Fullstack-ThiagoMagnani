@@ -12,7 +12,7 @@ async function bootstrap() {
       transformOptions: { groups: ['transform'] },
     }),
   );
-  app.enableCors({ origin: 'https://project-fullstack-thiagomagnani.vercel.app/' });
+  // app.enableCors({ origin: 'https://project-fullstack-thiagomagnani.vercel.app/' });
   await app.listen(3000);
 }
 bootstrap();
