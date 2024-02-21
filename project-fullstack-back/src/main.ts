@@ -12,7 +12,7 @@ async function bootstrap() {
       transformOptions: { groups: ['transform'] },
     }),
   );
-  app.enableCors({ origin: 'http://localhost:5173' });
+  app.enableCors({ origin: 'https://project-fullstack-3j5atlapt-thiagomagnani.vercel.app/' });
   await app.listen(3000);
 }
 bootstrap();
