@@ -57,16 +57,16 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 
 ### Contatos:
 
-- \*Post `/contact`: Criação de um contato.
-- \*Get `/contact`: Listagem de contatos.
-- \*Get `/contact/:contact_id`: Detalhes de um contato por ID.
-- \*Get `/contact/:clientId`: Listagem de contatos de um cliente.
-- \*Patch `/contact/:contact_id`: Atualização de informações de um contato.
-- \*Delete `/contact/:contact_id`: Exclusão de um contato.
+- *Post `/contact`: Criação de um contato.
+- *Get `/contact`: Listagem de contatos.
+- *Get `/contact/:contact_id`: Detalhes de um contato por ID.
+- *Get `/contact/:clientId`: Listagem de contatos de um cliente.
+- *Patch `/contact/:contact_id`: Atualização de informações de um contato.
+- *Delete `/contact/:contact_id`: Exclusão de um contato.
 
 ### Criação de PDF:
 
-- \*Get `/contact/generate-pdf/user`: Geração de PDF contendo informações de usuários e contatos.
+- *Get `/contact/generate-pdf/user`: Geração de PDF contendo informações de usuários e contatos.
 
 ## Exemplo de criação de usuário:
 
@@ -82,13 +82,13 @@ $ }
 ### Retorno bem sucedido:
 
 ```bash
-$ {
-$   "id": "1234567890",
-$   "name": "Jack robert",
-$   "email": "jack@example.com",
-$   "telephone": "12345678900",
-$   "registration_date": "2024-02-22T12:00:00Z"
-$ }
+{
+  "id": "1234567890",
+  "name": "Jack robert",
+  "email": "jack@example.com",
+  "telephone": "12345678900",
+  "registration_date": "2024-02-22T12:00:00Z"
+}
 ```
 
 ### Login Usuário:
