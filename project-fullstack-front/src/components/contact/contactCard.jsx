@@ -7,12 +7,14 @@ import { ContactContext } from "../providers/contactContext";
 export const ContactCard = ({ id, name, email, telephone, registration_date, contactAll }) => {
   const { cardDelete, setEditingContact } = useContext(ContactContext);
 
+  const formattedDate = new Date(registration_date).toLocaleDateString('pt-BR');
+
   return (
     <li className={styleList.itensList}>
       <h3 className={styleList.title}>{name}</h3>
       <p className={styleList.textList}>{email}</p>
       <p className={styleList.textList}>{telephone}</p>
-      <p className={styleList.textList}>{registration_date}</p>
+      <p className={styleList.textList}>{formattedDate}</p>
       <div className={styleList.buttonsCard}>
         <button
           className={styleList.buttonEdit}

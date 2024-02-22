@@ -14,11 +14,10 @@ export class ContactService {
     if (!client) {
       throw new NotFoundException('Client not found');
     }
-    const formattedDate = new Date().toLocaleDateString('pt-BR');
     const contact = new Contact();
     Object.assign(contact, {
       ...createContactDto,
-      registration_date: formattedDate,
+      registration_date: new Date().toLocaleDateString('pt-BR'),
       client: { connect: { ...client } },
     });
     await this.prisma.contact.create({
