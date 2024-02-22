@@ -44,16 +44,16 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 
 ## Rotas:
 
-- Todas as rotas marcadas com (\*) requerem autenticação com token atravez da rota de login.
+- Todas as rotas marcadas com (*) requerem autenticação com token atravez da rota de login.
 
 ### Clientes:
 
 - Post `/users`: Criação de usuários.
 - Login `/login`: Login de usuários.
-- \*Get `/users`: Listagem de usuários.
-- \*Get `/users/:id`: Detalhes de um usuário.
-- \*Patch `/users/:id`: Atualização de informações de um usuário.
-- \*Delete `/users/:id`: Exclusão de um usuário.
+- *Get `/users`: Listagem de usuários.
+- *Get `/users/:id`: Detalhes de um usuário.
+- *Patch `/users/:id`: Atualização de informações de um usuário.
+- *Delete `/users/:id`: Exclusão de um usuário.
 
 ### Contatos:
 
