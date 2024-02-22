@@ -12,10 +12,7 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: [
-      'https://project-fullstack-lyart.vercel.app/',
-      'http://localhost:5173/',
-    ],
+    origin: 'https://project-fullstack-lyart.vercel.app/',
   });
   await app.listen(3000);
 }
