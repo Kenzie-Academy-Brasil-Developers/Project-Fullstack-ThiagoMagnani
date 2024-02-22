@@ -133,7 +133,7 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 }
 ```
 
-## Retornos bem sucedidos:
+## Outro retornos bem sucedidos:
 
 - Get usuários/contatos:
 
