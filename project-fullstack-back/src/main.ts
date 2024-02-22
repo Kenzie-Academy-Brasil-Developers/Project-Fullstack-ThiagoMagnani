@@ -11,9 +11,7 @@ async function bootstrap() {
       transformOptions: { groups: ['transform'] },
     }),
   );
-  app.enableCors({
-    origin: 'https://project-fullstack-lyart.vercel.app/',
-  });
+  app.enableCors({ origin: 'https://project-fullstack-lyart.vercel.app/' });
   await app.listen(3000);
 }
 bootstrap();
