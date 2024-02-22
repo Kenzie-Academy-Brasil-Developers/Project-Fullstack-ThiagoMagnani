@@ -94,23 +94,27 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 ### Login Usuário:
 
 ```bash
-"email": "jack@example.com"
-"password": "securepassword"
+{
+  "email": "jack@example.com"
+  "password": "securepassword"
+}
 ```
 
 ### Retorno login bem sucedido:
 
 ```bash
-"token": "-----"
+{
+  "token": "-----"
+}
 ```
 
 ## Exemplo de criação de contato:
 
 ```bash
 {
-"name": "contact jack",
-"email": ["jac_2@exemple.com"],
-"telephone": ["12345678900", "112345678900"]
+  "name": "contact jack",
+  "email": ["jac_2@exemple.com"],
+  "telephone": ["12345678900", "112345678900"]
 }
 ```
 
@@ -121,10 +125,10 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 ```bash
 {
   "id": "1234567890",
-"name": "contact jack",
-"email": ["jac_2@exemple.com"],
-"telephone": ["12345678900", "112345678900"],
-"registration_date": "00/00/0000"
+  "name": "contact jack",
+  "email": ["jac_2@exemple.com"],
+  "telephone": ["12345678900", "112345678900"],
+  "registration_date": "00/00/0000"
   "client": { "(Informações do usuário)" }
 }
 ```
@@ -152,18 +156,18 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 
 ```bash
 - Post de usuário ja existente:
-    "User already exists"
+    - "User already exists"
 
 - Usuário/contato não encontrado/existente:
-    "User/contact not found"
+    - "User/contact not found"
 
 - Outros erros de digitação:
-    name should not be empty
-	email should not be empty
-	email must be an email
-	password must be longer than or equal to 8 characters
-	password should not be empty
-	telephone should not be empty
+    - name should not be empty
+	- email should not be empty
+	- email must be an email
+	- password must be longer than or equal to 8 characters
+	- password should not be empty
+	- telephone should not be empty
 ```
 
 > Essas instruções fornecem uma visão completa de como instalar, configurar e executar o front-end e o back-end do seu projeto. Certifique-se de seguir todos os passos para garantir o funcionamento adequado do sistema.
