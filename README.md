@@ -136,13 +136,11 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 ### Outro retornos bem sucedidos:
 
 - Get usuários/contatos:
-
   - Retorna os dados dos usuários/contatos
 
 - Patch usuários/contatos:
-
   - Retorna os dados do usuário/contato já alterado
-
+  
 - Criação do PDF:
   - "PDF created successfully: (nome do arquivo)"
 
