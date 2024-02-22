@@ -17,7 +17,7 @@ export class ContactService {
     const contact = new Contact();
     Object.assign(contact, {
       ...createContactDto,
-      registration_date: new Date().toLocaleDateString('pt-BR'),
+      registration_date: new Date(),
       client: { connect: { ...client } },
     });
     await this.prisma.contact.create({
