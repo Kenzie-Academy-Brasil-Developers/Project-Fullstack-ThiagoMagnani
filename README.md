@@ -156,18 +156,18 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 
 ```bash
 - Post de usuário ja existente:
-    - "User already exists"
+  - "User already exists"
 
 - Usuário/contato não encontrado/existente:
-    - "User/contact not found"
+  - "User/contact not found"
 
 - Outros erros de digitação:
-    - name should not be empty
-	- email should not be empty
-	- email must be an email
-	- password must be longer than or equal to 8 characters
-	- password should not be empty
-	- telephone should not be empty
+  - name should not be empty
+  - email should not be empty
+  - email must be an email
+  - password must be longer than or equal to 8 characters
+  - password should not be empty
+  - telephone should not be empty
 ```
 
 > Essas instruções fornecem uma visão completa de como instalar, configurar e executar o front-end e o back-end do seu projeto. Certifique-se de seguir todos os passos para garantir o funcionamento adequado do sistema.
