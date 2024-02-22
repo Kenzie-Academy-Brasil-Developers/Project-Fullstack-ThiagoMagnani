@@ -44,29 +44,29 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 
 ## Rotas:
 
-- Todas as rotas marcadas com (*) requerem autenticação com token atravez da rota de login.
+- Todas as rotas marcadas com (\*) requerem autenticação com token atravez da rota de login.
 
 ### Clientes:
 
 - Post `/users`: Criação de usuários.
 - Login `/login`: Login de usuários.
-- *Get `/users`: Listagem de usuários.
-- *Get `/users/:id`: Detalhes de um usuário.
-- *Patch `/users/:id`: Atualização de informações de um usuário.
-- *Delete `/users/:id`: Exclusão de um usuário.
+- \*Get `/users`: Listagem de usuários.
+- \*Get `/users/:id`: Detalhes de um usuário.
+- \*Patch `/users/:id`: Atualização de informações de um usuário.
+- \*Delete `/users/:id`: Exclusão de um usuário.
 
 ### Contatos:
 
-- *Post `/contact`: Criação de um contato.
-- *Get `/contact`: Listagem de contatos.
-- *Get `/contact/:contact_id`: Detalhes de um contato por ID.
-- *Get `/contact/:clientId`: Listagem de contatos de um cliente.
-- *Patch `/contact/:contact_id`: Atualização de informações de um contato.
-- *Delete `/contact/:contact_id`: Exclusão de um contato.
+- \*Post `/contact`: Criação de um contato.
+- \*Get `/contact`: Listagem de contatos.
+- \*Get `/contact/:contact_id`: Detalhes de um contato por ID.
+- \*Get `/contact/:clientId`: Listagem de contatos de um cliente.
+- \*Patch `/contact/:contact_id`: Atualização de informações de um contato.
+- \*Delete `/contact/:contact_id`: Exclusão de um contato.
 
 ### Criação de PDF:
 
-- *Get `/contact/generate-pdf/user`: Geração de PDF contendo informações de usuários e contatos.
+- \*Get `/contact/generate-pdf/user`: Geração de PDF contendo informações de usuários e contatos.
 
 ## Exemplo de criação de usuário:
 
@@ -87,7 +87,7 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
   "name": "Jack robert",
   "email": "jack@example.com",
   "telephone": "12345678900",
-  "registration_date": "2024-02-22T12:00:00Z"
+  "registration_date": "00/00/0000"
 }
 ```
 
@@ -136,12 +136,6 @@ Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as func
 ## Retornos bem sucedidos:
 
 ```bash
-- Post de usuário:
-   - Retorna os dados do usuário com id e registration_date
-
-- Login usuário:
-   - Retorna o token
-
 - Get usuários/contatos:
    - Retorna os dados dos usuários/contatos
 
