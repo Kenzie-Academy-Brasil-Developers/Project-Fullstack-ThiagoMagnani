@@ -1,111 +1,169 @@
 ## Objetivo do sistema:
+
 O sistema foi desenvolvido para suportar múltiplos usuários com vários contatos, mantendo a praticidade. O site possui uma estrutura organizada para evitar confusões e garantir a clareza das informações de forma dinâmica.
 
 ### Tela principal
+
 - Funcionalidades de criação, edição e exclusão de contatos.
 - Layout de fácil leitura e navegação.
 - Responsividade garantida para diferentes tamanhos de tela.
 - Estrutura dinâmica que se ajusta conforme a quantidade e tamanho dos contatos.
-
-## Instalação
-
-```bash
-$ npm i
-```
-
-## Execução
-
-```bash
-$ npm run dev
-```
 
 ### Importante:
 
 Certifique-se de iniciar tanto o banco de dados quanto o front-end simultaneamente, pois ambos estão interligados. Siga as etapas abaixo para garantir que o sistema funcione corretamente:
 
 1. **Inicie o Banco de Dados:**
-    - Navegue até o diretório do projeto back-end.
-    - Faça as instalações iniciais.
-    - Execute os comandos de migração do Prisma, se necessário.
-    - Execute `npm run start:dev` para iniciar o servidor back-end.
+
+   - Navegue até o diretório do projeto back-end.
+   - Faça as instalações iniciais (`npm i`).
+   - Com base no arquivo `.env.exemple` crie um arquivo `.env`.
+   - Execute os comandos de migração do Prisma `npx prisma migrate dev`, se necessário.
+   - Execute `npm run start` para iniciar o servidor back-end.
 
 2. **Inicie o Front-End:**
-    - Navegue até o diretório do projeto front-end.
-    - Faça as instalações iniciais.
-    - Execute `npm run dev` para iniciar o servidor front-end.
+   - Navegue até o diretório do projeto front-end.
+   - Faça as instalações iniciais (`npm i`).
+   - Execute `npm run dev` para iniciar o servidor front-end.
 
 Ao iniciar ambos os serviços, o sistema estará pronto para uso e todas as funcionalidades estarão disponíveis.
 
 ## Back-End / Banco de Dados
 
 ## Funcionalidades Principais:
+
 - Criação de usuários, login e manipulação de informações.
 - Gerenciamento de contatos, incluindo busca por ID e cliente.
 - Geração de PDFs organizados, com páginas separadas para cada cliente.
-    - Caso o número de contatos exceda o limite da página, uma nova página é criada automaticamente com o nome do cliente responsável pelos contatos, evitando cortes de informações.
+  - Caso o número de contatos exceda o limite da página, uma nova página é criada automaticamente com o nome do cliente responsável pelos contatos, evitando cortes de informações.
 
 ## Formatação no PDF:
+
 - Emails e telefones dos contatos são representados como arrays para suportar múltiplos itens.
 - O número de telefone é automaticamente formatado com DDD no formato padrão.
 
 ## Rotas:
-- Todas as rotas marcadas com (*) requerem autenticação com token atravez da rota de login.
+
+- Todas as rotas marcadas com (\*) requerem autenticação com token atravez da rota de login.
 
 ### Clientes:
+
 - Post `/users`: Criação de usuários.
 - Login `/login`: Login de usuários.
-- *Get `/users`: Listagem de usuários.
-- *Get `/users/:id`: Detalhes de um usuário.
-- *Patch `/users/:id`: Atualização de informações de um usuário.
-- *Delete `/users/:id`: Exclusão de um usuário.
+- \*Get `/users`: Listagem de usuários.
+- \*Get `/users/:id`: Detalhes de um usuário.
+- \*Patch `/users/:id`: Atualização de informações de um usuário.
+- \*Delete `/users/:id`: Exclusão de um usuário.
 
 ### Contatos:
-- *Post `/contact`: Criação de um contato.
-- *Get `/contact`: Listagem de contatos.
-- *Get `/contact/:contact_id`: Detalhes de um contato por ID.
-- *Get `/contact/:clientId`: Listagem de contatos de um cliente.
-- *Patch `/contact/:contact_id`: Atualização de informações de um contato.
-- *Delete `/contact/:contact_id`: Exclusão de um contato.
+
+- \*Post `/contact`: Criação de um contato.
+- \*Get `/contact`: Listagem de contatos.
+- \*Get `/contact/:contact_id`: Detalhes de um contato por ID.
+- \*Get `/contact/:clientId`: Listagem de contatos de um cliente.
+- \*Patch `/contact/:contact_id`: Atualização de informações de um contato.
+- \*Delete `/contact/:contact_id`: Exclusão de um contato.
 
 ### Criação de PDF:
-- *Get `/contact/generate-pdf/user`: Geração de PDF contendo informações de usuários e contatos.
 
-## Instalação
+- \*Get `/contact/generate-pdf/user`: Geração de PDF contendo informações de usuários e contatos.
+
+## Exemplo de criação de usuário:
 
 ```bash
-$ npm i
+$ {
+$   "name": "Jack robert",
+$   "email": "jack@example.com",
+$   "password": "securepassword",
+$   "telephone": "12345678900"
+$ }
 ```
 
-## Migração
+### Retorno bem sucedido:
 
 ```bash
-$ npx prisma migrate dev
+$ {
+$   "id": "1234567890",
+$   "name": "Jack robert",
+$   "email": "jack@example.com",
+$   "telephone": "12345678900",
+$   "registration_date": "2024-02-22T12:00:00Z"
+$ }
 ```
 
-## Execução
+### Login Usuário:
 
 ```bash
-# desenvolvimento
-$ npm run start
-
-# modo de observação
-$ npm run start:dev
-
-# modo de produção
-$ npm run start:prod
+$ "email": "jack@example.com"
+$ "password": "securepassword"
 ```
 
-## Testes
+### Retorno login bem sucedido:
 
 ```bash
-# testes unitários
-$ npm run test
+$ "token": "-----"
+```
 
-# testes e2e
-$ npm run test:e2e
+## Exemplo de criação de contato:
 
-# cobertura de teste
-$ npm run test:cov
+```bash
+$ {
+$	"name": "contact jack",
+$	"email": ["jac_2@exemple.com"],
+$	"telephone": ["12345678900", "112345678900"]
+$ }
+```
+
+> O contato criado é vinculado ao usuário originário do token passado.
+
+### Retorno bem sucedido:
+
+```bash
+$ {
+$   "id": "1234567890",
+$	"name": "contact jack",
+$	"email": ["jac_2@exemple.com"],
+$	"telephone": ["12345678900", "112345678900"],
+$	"registration_date": "00/00/0000"
+$   "client": { "(Informações do usuário)" }
+$ }
+```
+
+## Retornos bem sucedidos:
+
+```bash
+- Post de usuário:
+    $ Retorna os dados do usuário com id e registration_date
+
+- Login usuário:
+    $ Retorna o token
+
+- Get usuários/contatos:
+    $ Retorna os dados dos usuários/contatos
+
+- Patch usuários/contatos:
+    $ Retorna os dados do usuário/contato já alterado
+
+- Criação do PDF:
+    $ "PDF created successfully: (nome do arquivo)"
+```
+
+## Erros:
+
+```bash
+- Post de usuário ja existente:
+    $ "User already exists"
+
+- Usuário/contato não encontrado/existente:
+    $ "User/contact not found"
+
+- Outros erros de digitação:
+    $ name should not be empty
+	$ email should not be empty
+	$ email must be an email
+	$ password must be longer than or equal to 8 characters
+	$ password should not be empty
+	$ telephone should not be empty
 ```
 
 > Essas instruções fornecem uma visão completa de como instalar, configurar e executar o front-end e o back-end do seu projeto. Certifique-se de seguir todos os passos para garantir o funcionamento adequado do sistema.
