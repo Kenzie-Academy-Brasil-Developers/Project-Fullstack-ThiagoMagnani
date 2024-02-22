@@ -4,7 +4,6 @@ import { UpdateContactDto } from './dto/update-contact.dto';
 import { PrismaService } from 'src/database/prisma.service';
 import { plainToInstance } from 'class-transformer';
 import { Contact } from './entities/contact.entity';
-import { format } from 'date-fns';
 
 @Injectable()
 export class ContactService {
@@ -18,7 +17,7 @@ export class ContactService {
     const contact = new Contact();
     Object.assign(contact, {
       ...createContactDto,
-      registration_date: format(new Date(), 'dd/MM/yyyy'),
+      registration_date: new Date().toLocaleDateString('pt-BR'),
       client: { connect: { ...client } },
     });
     await this.prisma.contact.create({
