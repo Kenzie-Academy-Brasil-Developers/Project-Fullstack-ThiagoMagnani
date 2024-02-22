@@ -71,7 +71,6 @@ export const ContactProvider = ({ children }) => {
         isOpen,
         cardDelete,
         addNewContact,
-        // getContact,
         editingContact,
         setEditingContact,
         contactUpdate,

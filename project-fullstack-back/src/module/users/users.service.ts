@@ -23,7 +23,7 @@ export class UsersService {
     const user = new User();
     Object.assign(user, {
       ...createUserDto,
-      registration_date: new Date().toISOString(),
+      registration_date: new Date().toLocaleDateString('pt-BR'),
     });
     await this.prisma.user.create({
       data: { ...user },

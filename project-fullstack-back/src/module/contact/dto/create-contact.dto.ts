@@ -15,7 +15,4 @@ export class CreateContactDto {
   @ArrayNotEmpty()
   @IsString({ each: true })
   telephone: string;
-
-  @IsString()
-  registration_date: string;
 }
